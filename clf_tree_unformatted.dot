@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="color_intensity <= 3.49\ngini = 0.659\nsamples = 123\nvalue = [42, 33, 48]\nclass = Chardonnay"] ;
+1 [label="gini = 0.0\nsamples = 38\nvalue = [0, 0, 38]\nclass = Chardonnay"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="flavonoids <= 1.4\ngini = 0.591\nsamples = 85\nvalue = [42, 33, 10]\nclass = Trebbiano"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="color_hue <= 1.005\ngini = 0.057\nsamples = 34\nvalue = [0, 33, 1]\nclass = Montepulciano"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 33\nvalue = [0, 33, 0]\nclass = Montepulciano"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]\nclass = Chardonnay"] ;
+3 -> 5 ;
+6 [label="proline <= 724.5\ngini = 0.291\nsamples = 51\nvalue = [42, 0, 9]\nclass = Trebbiano"] ;
+2 -> 6 ;
+7 [label="malic_acid <= 2.93\ngini = 0.18\nsamples = 10\nvalue = [1, 0, 9]\nclass = Chardonnay"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 9\nvalue = [0, 0, 9]\nclass = Chardonnay"] ;
+7 -> 8 ;
+9 [label="gini = 0.0\nsamples = 1\nvalue = [1, 0, 0]\nclass = Trebbiano"] ;
+7 -> 9 ;
+10 [label="gini = 0.0\nsamples = 41\nvalue = [41, 0, 0]\nclass = Trebbiano"] ;
+6 -> 10 ;
+}
